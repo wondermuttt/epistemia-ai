@@ -1,0 +1,28 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="#2c2c2c" stroke="#C0C0C0" stroke-width="1"/>
+  
+  <!-- Chess knight (strategy symbol) -->
+  <g transform="translate(32,32)" opacity="0.9">
+    <!-- Knight piece -->
+    <path d="M-8,-12 Q-12,-8 -10,-4 Q-8,0 -4,4 Q0,8 8,6 Q12,4 10,0 Q8,-4 4,-8 Q0,-12 -8,-12 Z" 
+          fill="#C0C0C0" stroke="#A0A0A0" stroke-width="0.5"/>
+    
+    <!-- Knight's mane -->
+    <path d="M-6,-10 Q-4,-12 -2,-10 Q0,-8 2,-10" stroke="#A0A0A0" stroke-width="1" fill="none"/>
+    
+    <!-- Eye -->
+    <circle cx="-2" cy="-6" r="1" fill="#2c2c2c"/>
+    
+    <!-- Base -->
+    <ellipse cx="0" cy="8" rx="8" ry="2" fill="#A0A0A0"/>
+  </g>
+  
+  <!-- Circuit pattern overlay -->
+  <g opacity="0.5">
+    <path d="M15,15 L25,15 L25,10 L35,10" stroke="#C0C0C0" stroke-width="0.5" fill="none"/>
+    <path d="M45,50 L35,50 L35,55 L25,55" stroke="#C0C0C0" stroke-width="0.5" fill="none"/>
+    <circle cx="25" cy="15" r="1" fill="#C0C0C0"/>
+    <circle cx="35" cy="50" r="1" fill="#C0C0C0"/>
+  </g>
+</svg>

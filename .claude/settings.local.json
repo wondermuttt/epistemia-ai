@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(open index.html)",
+      "Bash(python3:*)",
+      "Bash(open test.html)",
+      "Bash(open http://localhost:8000)",
+      "Bash(cp:*)",
+      "Bash(sed:*)",
+      "Bash(grep:*)"
+    ],
+    "deny": []
+  }
+}

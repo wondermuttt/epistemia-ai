@@ -1,0 +1,40 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#1e1e1e"/>
+  
+  <!-- Central server -->
+  <rect x="135" y="80" width="30" height="40" fill="#36454F" stroke="#C0C0C0" stroke-width="1"/>
+  <rect x="140" y="85" width="20" height="5" fill="#4682B4"/>
+  <rect x="140" y="95" width="20" height="5" fill="#4682B4"/>
+  <rect x="140" y="105" width="20" height="5" fill="#4682B4"/>
+  
+  <!-- Distributed nodes -->
+  <g opacity="0.8">
+    <!-- Top nodes -->
+    <rect x="80" y="30" width="20" height="15" fill="#36454F" stroke="#C0C0C0" stroke-width="1"/>
+    <rect x="200" y="30" width="20" height="15" fill="#36454F" stroke="#C0C0C0" stroke-width="1"/>
+    
+    <!-- Side nodes -->
+    <rect x="30" y="90" width="20" height="15" fill="#36454F" stroke="#C0C0C0" stroke-width="1"/>
+    <rect x="250" y="90" width="20" height="15" fill="#36454F" stroke="#C0C0C0" stroke-width="1"/>
+    
+    <!-- Bottom nodes -->
+    <rect x="80" y="150" width="20" height="15" fill="#36454F" stroke="#C0C0C0" stroke-width="1"/>
+    <rect x="200" y="150" width="20" height="15" fill="#36454F" stroke="#C0C0C0" stroke-width="1"/>
+  </g>
+  
+  <!-- Connection lines -->
+  <g opacity="0.6">
+    <path d="M150,80 L90,45" stroke="#C0C0C0" stroke-width="1.5"/>
+    <path d="M150,80 L210,45" stroke="#C0C0C0" stroke-width="1.5"/>
+    <path d="M135,100 L50,97" stroke="#C0C0C0" stroke-width="1.5"/>
+    <path d="M165,100 L250,97" stroke="#C0C0C0" stroke-width="1.5"/>
+    <path d="M150,120 L90,157" stroke="#C0C0C0" stroke-width="1.5"/>
+    <path d="M150,120 L210,157" stroke="#C0C0C0" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Shield icon for privacy -->
+  <g transform="translate(180,130)" opacity="0.7">
+    <path d="M0,10 Q0,0 10,0 Q20,0 20,10 L20,20 Q10,30 0,20 Z" fill="#4682B4" stroke="#C0C0C0" stroke-width="0.5"/>
+    <text x="10" y="18" text-anchor="middle" font-size="12" fill="#C0C0C0">P</text>
+  </g>
+</svg>

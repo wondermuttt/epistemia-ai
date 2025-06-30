@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Epistemia AI Consultancy</title>
+    <meta name="description" content="Contact Epistemia AI Consultancy to discuss how we can help with your AI strategy, leadership training, and model epistemology needs.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Epistemia Logo">
+                    <span class="company-name">Epistemia</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="menu-toggle">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-content">
+        <!-- Contact Header -->
+        <section class="contact-header text-center mb-lg">
+            <h1>Contact Us</h1>
+            <p>Have questions or want to discuss how Epistemia can assist with your AI strategy? We'd love to hear from you. Please fill out the form below and we'll get in touch.</p>
+        </section>
+
+        <!-- Contact Content -->
+        <section class="contact-section">
+            <div style="max-width: 800px; margin: 0 auto;">
+                
+                <!-- Contact Form -->
+                <form class="contact-form" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company" placeholder="Your Company (Optional)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="">Please select a topic</option>
+                            <option value="strategic-consulting">Strategic AI Consulting</option>
+                            <option value="leadership-training">AI Leadership Training</option>
+                            <option value="epistemology-guidance">Model Epistemology Guidance</option>
+                            <option value="general-inquiry">General Inquiry</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your AI challenges and how we can help..." required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn">Send Message</button>
+                    </div>
+                </form>
+
+                <!-- Contact Information -->
+                <div class="contact-info" style="margin-top: 3rem; text-align: center; padding: 2rem; background: var(--dark-gray); border-radius: 12px;">
+                    <h2 style="margin-bottom: 1rem;">Alternative Contact Methods</h2>
+                    <p style="margin-bottom: 0.5rem;">Or email us directly at <a href="mailto:info@epistemia.ai" style="color: var(--accent-blue);">info@epistemia.ai</a></p>
+                    <p style="margin-bottom: 1rem;">We typically respond within 24 hours during business days.</p>
+                    
+                    <div class="response-time" style="font-size: 0.9rem; color: #888;">
+                        <p><strong>Response Times:</strong></p>
+                        <p>Strategic Consulting Inquiries: Same day</p>
+                        <p>Training Program Requests: Within 24 hours</p>
+                        <p>General Questions: Within 48 hours</p>
+                    </div>
+                </div>
+
+                <!-- Success Message (Initially Hidden) -->
+                <div id="successMessage" class="success-message" style="display: none; background: var(--accent-blue); color: white; padding: 1rem; border-radius: 8px; margin-top: 2rem; text-align: center;">
+                    <h3>Thank You!</h3>
+                    <p>Your message has been sent successfully. We'll get back to you soon.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Epistemia AI Consultancy. All rights reserved.</p>
+            <p>Empowering intelligent solutions through epistemic AI</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">↑</button>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - Epistemia AI Consultancy</title>
+    <meta name="description" content="Explore our latest insights and research across various AI topics including enterprise AI, epistemology, federated learning, and AI in society.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Epistemia Logo">
+                    <span class="company-name">Epistemia</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="menu-toggle">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-content">
+        <!-- Page Header -->
+        <section class="page-header text-center mb-lg">
+            <h1>Articles</h1>
+            <p>Explore our latest insights and research across various AI topics</p>
+        </section>
+
+        <!-- Category Filter Menu -->
+        <section class="filter-section">
+            <div id="filter-menu" class="filter-menu">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="enterprise">Enterprise AI</button>
+                <button class="filter-btn" data-category="epistemology">AI Epistemology</button>
+                <button class="filter-btn" data-category="federated">Federated Learning</button>
+                <button class="filter-btn" data-category="society">AI in Society</button>
+            </div>
+        </section>
+
+        <!-- Articles Grid -->
+        <section class="articles-section">
+            <div class="articles-grid" id="articles-container">
+                <!-- Articles will be dynamically loaded from articles.json -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Epistemia AI Consultancy. All rights reserved.</p>
+            <p>Empowering intelligent solutions through epistemic AI</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">↑</button>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

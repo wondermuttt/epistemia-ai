@@ -1,0 +1,43 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="#2c2c2c" stroke="#C0C0C0" stroke-width="1"/>
+  
+  <!-- Owl (wisdom/guidance symbol) -->
+  <g transform="translate(32,32)">
+    <!-- Owl body -->
+    <ellipse cx="0" cy="4" rx="12" ry="10" fill="#C0C0C0" opacity="0.8"/>
+    
+    <!-- Owl head -->
+    <circle cx="0" cy="-6" r="8" fill="#C0C0C0" opacity="0.8"/>
+    
+    <!-- Eyes -->
+    <circle cx="-3" cy="-8" r="2.5" fill="#2c2c2c"/>
+    <circle cx="3" cy="-8" r="2.5" fill="#2c2c2c"/>
+    <circle cx="-3" cy="-8" r="1" fill="#C0C0C0"/>
+    <circle cx="3" cy="-8" r="1" fill="#C0C0C0"/>
+    
+    <!-- Beak -->
+    <polygon points="0,-4 -1.5,-1 1.5,-1" fill="#B8860B"/>
+    
+    <!-- Book beneath owl -->
+    <rect x="-6" y="12" width="12" height="8" fill="#36454F" stroke="#C0C0C0" stroke-width="0.5"/>
+    <line x1="0" y1="12" x2="0" y2="20" stroke="#C0C0C0" stroke-width="0.5"/>
+    <line x1="-4" y1="14" x2="-1" y2="14" stroke="#C0C0C0" stroke-width="0.3"/>
+    <line x1="-4" y1="16" x2="-1" y2="16" stroke="#C0C0C0" stroke-width="0.3"/>
+    <line x1="1" y1="14" x2="4" y2="14" stroke="#C0C0C0" stroke-width="0.3"/>
+    <line x1="1" y1="16" x2="4" y2="16" stroke="#C0C0C0" stroke-width="0.3"/>
+  </g>
+  
+  <!-- Magnifying glass overlay -->
+  <g transform="translate(45,20)" opacity="0.7">
+    <circle cx="0" cy="0" r="6" fill="none" stroke="#4682B4" stroke-width="1.5"/>
+    <line x1="4" y1="4" x2="8" y2="8" stroke="#4682B4" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Insight rays -->
+  <g opacity="0.6">
+    <path d="M20,12 L16,8" stroke="#4682B4" stroke-width="1" fill="none"/>
+    <path d="M32,10 L32,6" stroke="#4682B4" stroke-width="1" fill="none"/>
+    <path d="M44,12 L48,8" stroke="#4682B4" stroke-width="1" fill="none"/>
+  </g>
+</svg>

@@ -1,0 +1,53 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#1e1e1e"/>
+  
+  <!-- Globe -->
+  <circle cx="150" cy="100" r="40" fill="none" stroke="#C0C0C0" stroke-width="2"/>
+  <path d="M110,100 Q150,80 190,100 Q150,120 110,100" stroke="#C0C0C0" stroke-width="1" fill="none"/>
+  <path d="M110,100 Q150,120 190,100 Q150,80 110,100" stroke="#C0C0C0" stroke-width="1" fill="none"/>
+  <line x1="150" y1="60" x2="150" y2="140" stroke="#C0C0C0" stroke-width="1"/>
+  <line x1="110" y1="100" x2="190" y2="100" stroke="#C0C0C0" stroke-width="1"/>
+  
+  <!-- People icons around globe -->
+  <g opacity="0.8">
+    <!-- Person 1 -->
+    <g transform="translate(80,70)">
+      <circle cx="0" cy="0" r="5" fill="#36454F"/>
+      <rect x="-3" y="5" width="6" height="12" fill="#36454F"/>
+    </g>
+    
+    <!-- Person 2 -->
+    <g transform="translate(220,70)">
+      <circle cx="0" cy="0" r="5" fill="#36454F"/>
+      <rect x="-3" y="5" width="6" height="12" fill="#36454F"/>
+    </g>
+    
+    <!-- Person 3 -->
+    <g transform="translate(80,130)">
+      <circle cx="0" cy="0" r="5" fill="#36454F"/>
+      <rect x="-3" y="5" width="6" height="12" fill="#36454F"/>
+    </g>
+    
+    <!-- Person 4 -->
+    <g transform="translate(220,130)">
+      <circle cx="0" cy="0" r="5" fill="#36454F"/>
+      <rect x="-3" y="5" width="6" height="12" fill="#36454F"/>
+    </g>
+  </g>
+  
+  <!-- AI circuit overlay -->
+  <g opacity="0.6">
+    <path d="M50,30 L90,30 L90,50 L120,50" stroke="#4682B4" stroke-width="1.5" fill="none"/>
+    <path d="M180,50 L210,50 L210,30 L250,30" stroke="#4682B4" stroke-width="1.5" fill="none"/>
+    <circle cx="90" cy="30" r="2" fill="#4682B4"/>
+    <circle cx="210" cy="30" r="2" fill="#4682B4"/>
+  </g>
+  
+  <!-- Connection lines to people -->
+  <g opacity="0.4">
+    <path d="M110,80 L80,75" stroke="#C0C0C0" stroke-width="1" fill="none"/>
+    <path d="M190,80 L220,75" stroke="#C0C0C0" stroke-width="1" fill="none"/>
+    <path d="M110,120 L80,135" stroke="#C0C0C0" stroke-width="1" fill="none"/>
+    <path d="M190,120 L220,135" stroke="#C0C0C0" stroke-width="1" fill="none"/>
+  </g>
+</svg>
