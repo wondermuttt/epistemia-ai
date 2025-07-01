@@ -248,7 +248,7 @@ main {
 }
 
 .article-item:hover .article-image {
-  opacity: 0.3;  /* 30% image visibility to match 70% overlay */
+  opacity: 0.5;  /* 50% image visibility to match 50% overlay */
 }
 
 .article-overlay {
@@ -257,7 +257,7 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(44, 44, 44, 0.7);  /* Semi-transparent grey overlay - 70% opacity */
+  background: rgba(44, 44, 44, 0.5);  /* Semi-transparent grey overlay - 50% opacity */
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -293,9 +293,11 @@ main {
   color: var(--text-light);
   font-size: 0.9rem;
   line-height: 1.5;
-  display: flex;
-  align-items: center;
-  height: 100%;
+  position: absolute;
+  top: 33.33%;  /* 1/3 of space above */
+  left: 1.5rem;
+  right: 1.5rem;
+  transform: translateY(-50%);
 }
 
 .article-excerpt p {
