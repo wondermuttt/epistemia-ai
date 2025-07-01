@@ -1,0 +1,23 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Epistemia Owl Favicon - Tightly Cropped -->
+  <!-- Owl head silhouette -->
+  <path d="M16 2 C8 2 2 8 2 16 C2 24 8 30 16 30 C24 30 30 24 30 16 C30 8 24 2 16 2 Z" 
+        fill="none" stroke="#C0C0C0" stroke-width="2.5"/>
+  
+  <!-- Ear tufts -->
+  <path d="M8 4 Q6 2 8 2 Q12 4 16 6 Q20 4 24 2 Q26 2 24 4" 
+        fill="none" stroke="#C0C0C0" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Eyes -->
+  <circle cx="11" cy="13" r="4" fill="none" stroke="#C0C0C0" stroke-width="2"/>
+  <circle cx="21" cy="13" r="4" fill="none" stroke="#C0C0C0" stroke-width="2"/>
+  <circle cx="11" cy="13" r="2" fill="#C0C0C0"/>
+  <circle cx="21" cy="13" r="2" fill="#C0C0C0"/>
+  
+  <!-- Beak -->
+  <path d="M16 17 L13 21 L16 20 L19 21 Z" fill="#C0C0C0"/>
+  
+  <!-- Wing detail lines -->
+  <path d="M6 20 Q10 22 16 24 Q22 22 26 20" 
+        fill="none" stroke="#C0C0C0" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
