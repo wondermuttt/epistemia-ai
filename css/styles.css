@@ -248,7 +248,7 @@ main {
 }
 
 .article-item:hover .article-image {
-  opacity: 0.2;
+  opacity: 0.3;  /* 30% image visibility to match 70% overlay */
 }
 
 .article-overlay {
@@ -257,7 +257,7 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(44, 44, 44, 0.8);  /* Semi-transparent grey overlay */
+  background: rgba(44, 44, 44, 0.7);  /* Semi-transparent grey overlay - 70% opacity */
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -287,19 +287,15 @@ main {
   line-height: 1.3;
 }
 
-.article-overlay .article-title {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  color: var(--metallic-silver);
-  line-height: 1.3;
-  font-weight: 600;
-}
+/* Removed title from overlay - title shows through from original card */
 
 .article-excerpt {
   color: var(--text-light);
   font-size: 0.9rem;
   line-height: 1.5;
-  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .article-excerpt p {
