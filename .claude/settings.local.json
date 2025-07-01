@@ -10,7 +10,14 @@
       "Bash(open http://localhost:8000)",
       "Bash(cp:*)",
       "Bash(sed:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(git pull:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(convert:*)",
+      "Bash(sips:*)",
+      "Bash(rm:*)"
     ],
     "deny": []
   }
