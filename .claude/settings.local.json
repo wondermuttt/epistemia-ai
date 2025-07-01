@@ -17,7 +17,9 @@
       "Bash(git push:*)",
       "Bash(convert:*)",
       "Bash(sips:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(curl:*)",
+      "Bash(kill:*)"
     ],
     "deny": []
   }

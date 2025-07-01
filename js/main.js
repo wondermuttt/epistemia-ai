@@ -214,7 +214,7 @@ function generateArticleCards(articles, isIndexPage = false) {
                     <h3 class="article-title">${article.title}</h3>
                 </div>
                 <div class="article-overlay">
-                    <span class="article-category">${article.categoryDisplay}</span>
+                    <h3 class="article-title">${article.title}</h3>
                     <div class="article-excerpt">
                         <p>${article.summary}</p>
                     </div>
