@@ -2,27 +2,67 @@
   <!-- Background circle -->
   <circle cx="32" cy="32" r="30" fill="#2c2c2c" stroke="#C0C0C0" stroke-width="1"/>
   
-  <!-- Chess knight (strategy symbol) -->
-  <g transform="translate(32,32)" opacity="0.9">
-    <!-- Knight piece -->
-    <path d="M-8,-12 Q-12,-8 -10,-4 Q-8,0 -4,4 Q0,8 8,6 Q12,4 10,0 Q8,-4 4,-8 Q0,-12 -8,-12 Z" 
-          fill="#C0C0C0" stroke="#A0A0A0" stroke-width="0.5"/>
+  <!-- Strategic compass/navigation -->
+  <g transform="translate(32,32)">
+    <!-- Outer compass ring -->
+    <circle cx="0" cy="0" r="18" fill="none" stroke="#C0C0C0" stroke-width="1.5" opacity="0.8"/>
     
-    <!-- Knight's mane -->
-    <path d="M-6,-10 Q-4,-12 -2,-10 Q0,-8 2,-10" stroke="#A0A0A0" stroke-width="1" fill="none"/>
+    <!-- Cardinal directions (strategy points) -->
+    <g stroke="#C0C0C0" stroke-width="1" fill="#C0C0C0">
+      <!-- North - primary direction -->
+      <path d="M0,-18 L-3,-12 L0,-14 L3,-12 Z" fill="#C0C0C0"/>
+      <!-- East -->
+      <circle cx="18" cy="0" r="2" opacity="0.7"/>
+      <!-- South -->
+      <circle cx="0" cy="18" r="2" opacity="0.7"/>
+      <!-- West -->
+      <circle cx="-18" cy="0" r="2" opacity="0.7"/>
+    </g>
     
-    <!-- Eye -->
-    <circle cx="-2" cy="-6" r="1" fill="#2c2c2c"/>
+    <!-- AI neural network pattern in center -->
+    <g opacity="0.9">
+      <!-- Central hub -->
+      <circle cx="0" cy="0" r="3" fill="#C0C0C0"/>
+      
+      <!-- Neural connections -->
+      <g stroke="#C0C0C0" stroke-width="0.5" fill="none">
+        <path d="M0,0 L-8,-8"/>
+        <path d="M0,0 L8,-8"/>
+        <path d="M0,0 L-8,8"/>
+        <path d="M0,0 L8,8"/>
+        <path d="M0,0 L-12,0"/>
+        <path d="M0,0 L12,0"/>
+        <path d="M0,0 L0,-12"/>
+        <path d="M0,0 L0,12"/>
+      </g>
+      
+      <!-- Neural nodes -->
+      <g fill="#C0C0C0">
+        <circle cx="-8" cy="-8" r="1.5"/>
+        <circle cx="8" cy="-8" r="1.5"/>
+        <circle cx="-8" cy="8" r="1.5"/>
+        <circle cx="8" cy="8" r="1.5"/>
+        <circle cx="-12" cy="0" r="1.5"/>
+        <circle cx="12" cy="0" r="1.5"/>
+        <circle cx="0" cy="-12" r="1.5"/>
+        <circle cx="0" cy="12" r="1.5"/>
+      </g>
+    </g>
     
-    <!-- Base -->
-    <ellipse cx="0" cy="8" rx="8" ry="2" fill="#A0A0A0"/>
+    <!-- Strategic path indicators -->
+    <g opacity="0.5" stroke="#C0C0C0" stroke-width="0.5" fill="none">
+      <path d="M-10,-10 L-5,-5" stroke-dasharray="2,1"/>
+      <path d="M10,-10 L5,-5" stroke-dasharray="2,1"/>
+      <path d="M-10,10 L-5,5" stroke-dasharray="2,1"/>
+      <path d="M10,10 L5,5" stroke-dasharray="2,1"/>
+    </g>
   </g>
   
-  <!-- Circuit pattern overlay -->
-  <g opacity="0.5">
-    <path d="M15,15 L25,15 L25,10 L35,10" stroke="#C0C0C0" stroke-width="0.5" fill="none"/>
-    <path d="M45,50 L35,50 L35,55 L25,55" stroke="#C0C0C0" stroke-width="0.5" fill="none"/>
-    <circle cx="25" cy="15" r="1" fill="#C0C0C0"/>
-    <circle cx="35" cy="50" r="1" fill="#C0C0C0"/>
+  <!-- Corner accent markers -->
+  <g opacity="0.4">
+    <circle cx="12" cy="12" r="1" fill="#C0C0C0"/>
+    <circle cx="52" cy="12" r="1" fill="#C0C0C0"/>
+    <circle cx="12" cy="52" r="1" fill="#C0C0C0"/>
+    <circle cx="52" cy="52" r="1" fill="#C0C0C0"/>
   </g>
 </svg>

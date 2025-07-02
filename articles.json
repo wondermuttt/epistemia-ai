@@ -77,7 +77,7 @@
       "categoryDisplay": "Enterprise AI",
       "image": "card-society-cityscape.png",
       "summary": "Create innovative business models that leverage AI capabilities for competitive advantage. Explore how leading companies are reimagining their value propositions through AI integration.",
-      "showOnIndex": true,
+      "showOnIndex": false,
       "showOnArticles": true
     },
     {
@@ -107,7 +107,7 @@
       "categoryDisplay": "AI Epistemology",
       "image": "card-epistemology-insight.png",
       "summary": "Techniques and frameworks for understanding how AI models arrive at their conclusions and recommendations. Master the art of model interpretability and build trust in AI systems through transparency and explainability.",
-      "showOnIndex": true,
+      "showOnIndex": false,
       "showOnArticles": true
     },
     {
