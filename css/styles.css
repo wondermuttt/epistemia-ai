@@ -28,6 +28,18 @@ body {
   font-size: 16px;
 }
 
+/* Micro-narrative Bar */
+.micro-narrative-bar {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: var(--light-silver);
+  text-align: center;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+  border-top: 1px solid var(--medium-gray);
+  padding-top: 1rem;
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6, .hero-tagline {
   font-family: 'Lora', serif;
@@ -353,11 +365,38 @@ main {
 }
 
 /* Services Section */
+.section-wrapper.section-dark {
+  background-color: rgba(11, 30, 46, 0.95);
+  padding: 4rem 2rem;
+  margin-bottom: 4rem;
+}
+
+.services-section-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.services-section-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--metallic-silver);
+}
+
+.services-section-intro p {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 3rem;
   margin-top: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .service {
@@ -386,6 +425,31 @@ main {
 
 .service-description {
   color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Epistemology Banner */
+.epistemology-banner {
+  background: var(--dark-gray);
+  padding: 2.5rem 2rem;
+  border-left: 4px solid var(--accent-blue);
+  border-radius: 8px;
+  margin-top: 3rem;
+  text-align: center;
+  color: var(--light-silver);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.epistemology-banner h3 {
+  font-size: 1.5rem;
+  color: var(--metallic-silver);
+  margin-bottom: 1rem;
+}
+
+.epistemology-banner p {
+  font-size: 1rem;
   line-height: 1.6;
 }
 
