@@ -442,6 +442,13 @@ main {
   margin-right: auto;
 }
 
+.epistemology-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+
 .epistemology-banner h3 {
   font-size: 1.5rem;
   color: var(--metallic-silver);
