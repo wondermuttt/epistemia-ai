@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         initScrollAnimations();
         initFormValidation();
         initScrollToTop();
+        initHeroAnimation();
     }).catch(error => {
         console.error('Failed to load articles data:', error);
         // Initialize other functionality even if articles fail to load
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         initScrollAnimations();
         initFormValidation();
         initScrollToTop();
+        initHeroAnimation();
     });
 });
 
@@ -570,6 +572,30 @@ const debouncedScrollHandler = debounce(function() {
 }, 100);
 
 window.addEventListener('scroll', debouncedScrollHandler);
+
+// Hero section animation
+function initHeroAnimation() {
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+    
+    // Add parallax effect on mouse move
+    hero.addEventListener('mousemove', function(e) {
+        const rect = hero.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width;
+        const y = (e.clientY - rect.top) / rect.height;
+        
+        // Subtle background position shift
+        const xOffset = (x - 0.5) * 20;
+        const yOffset = (y - 0.5) * 20;
+        
+        hero.style.backgroundPosition = `calc(50% + ${xOffset}px) calc(50% + ${yOffset}px)`;
+    });
+    
+    // Reset position on mouse leave
+    hero.addEventListener('mouseleave', function() {
+        hero.style.backgroundPosition = 'center center';
+    });
+}
 
 // Console welcome message
 console.log('%cWelcome to Epistemia AI Consultancy', 'color: #4682B4; font-size: 18px; font-weight: bold;');
