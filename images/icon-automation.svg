@@ -1,0 +1,36 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="#2c2c2c" stroke="#C0C0C0" stroke-width="1"/>
+  
+  <!-- Gear/cog (automation symbol) -->
+  <g transform="translate(32,32)">
+    <!-- Main gear -->
+    <path d="M-3,-12 L3,-12 L4,-8 L8,-7 L11,-10 L15,-6 L12,-3 L13,1 L17,2 L17,8 L13,9 L12,13 L15,16 L11,20 L8,17 L4,18 L3,22 L-3,22 L-4,18 L-8,17 L-11,20 L-15,16 L-12,13 L-13,9 L-17,8 L-17,2 L-13,1 L-12,-3 L-15,-6 L-11,-10 L-8,-7 L-4,-8 Z" 
+          fill="#C0C0C0" stroke="#A0A0A0" stroke-width="0.5"/>
+    
+    <!-- Inner circle (hub) -->
+    <circle cx="0" cy="0" r="6" fill="#2c2c2c" stroke="#C0C0C0" stroke-width="1"/>
+    
+    <!-- AI brain pattern inside -->
+    <g opacity="0.8">
+      <path d="M-3,-2 Q-1,-3 1,-2 Q3,-1 2,1 Q1,3 -1,2 Q-3,1 -2,-1" 
+            stroke="#C0C0C0" stroke-width="0.5" fill="none"/>
+      <circle cx="0" cy="0" r="1" fill="#C0C0C0"/>
+    </g>
+  </g>
+  
+  <!-- Circuit/flow arrows (automation flow) -->
+  <g opacity="0.6">
+    <path d="M10,32 L15,32" stroke="#C0C0C0" stroke-width="1" fill="none" marker-end="url(#arrow)"/>
+    <path d="M49,32 L54,32" stroke="#C0C0C0" stroke-width="1" fill="none" marker-end="url(#arrow)"/>
+    <circle cx="10" cy="32" r="2" fill="#C0C0C0"/>
+    <circle cx="54" cy="32" r="2" fill="#C0C0C0"/>
+  </g>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow" markerWidth="4" markerHeight="4" refX="3" refY="2" orient="auto">
+      <path d="M0,0 L4,2 L0,4" fill="#C0C0C0"/>
+    </marker>
+  </defs>
+</svg>

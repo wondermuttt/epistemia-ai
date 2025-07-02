@@ -1,32 +1,92 @@
 {
   "articles": [
     {
-      "id": "future-enterprise-ai",
-      "title": "The Future of Enterprise AI",
+      "id": "ai-strategy-framework",
+      "title": "Building Your AI Strategy Framework",
+      "category": "strategy",
+      "categoryDisplay": "AI Strategy",
+      "image": "card-enterprise-strategy.png",
+      "summary": "Develop a comprehensive AI strategy that aligns with your business objectives. Learn how to assess AI readiness, identify high-value use cases, and create a phased implementation roadmap that delivers measurable ROI.",
+      "showOnIndex": true,
+      "showOnArticles": true
+    },
+    {
+      "id": "ai-transformation-roadmap",
+      "title": "AI Transformation Roadmap",
+      "category": "strategy",
+      "categoryDisplay": "AI Strategy",
+      "image": "card-enterprise-control.png",
+      "summary": "Navigate the complexities of enterprise AI transformation with proven methodologies. From initial pilot projects to full-scale deployment, master the strategic planning required for successful AI adoption.",
+      "showOnIndex": true,
+      "showOnArticles": true
+    },
+    {
+      "id": "ai-governance-strategy",
+      "title": "AI Governance and Risk Management",
+      "category": "strategy",
+      "categoryDisplay": "AI Strategy",
+      "image": "card-society-guidance.png",
+      "summary": "Establish robust governance frameworks that ensure responsible AI deployment. Learn how to manage AI risks, ensure compliance, and build trust through transparent AI practices.",
+      "showOnIndex": false,
+      "showOnArticles": true
+    },
+    {
+      "id": "process-automation-ai",
+      "title": "Intelligent Process Automation",
+      "category": "automation",
+      "categoryDisplay": "AI Automation",
+      "image": "card-federated-network.png",
+      "summary": "Transform business processes through intelligent automation powered by AI. Discover how to identify automation opportunities, implement RPA with AI capabilities, and achieve operational excellence.",
+      "showOnIndex": true,
+      "showOnArticles": true
+    },
+    {
+      "id": "ai-workflow-optimization",
+      "title": "AI-Driven Workflow Optimization",
+      "category": "automation",
+      "categoryDisplay": "AI Automation",
+      "image": "card-federated-distributed.png",
+      "summary": "Optimize complex workflows using AI to enhance efficiency and reduce operational costs. Learn best practices for integrating AI into existing systems and maximizing automation benefits.",
+      "showOnIndex": true,
+      "showOnArticles": true
+    },
+    {
+      "id": "autonomous-systems-design",
+      "title": "Designing Autonomous AI Systems",
+      "category": "automation",
+      "categoryDisplay": "AI Automation",
+      "image": "card-federated-pathways.png",
+      "summary": "Build self-managing AI systems that adapt and improve over time. Explore advanced automation techniques, from predictive maintenance to autonomous decision-making systems.",
+      "showOnIndex": false,
+      "showOnArticles": true
+    },
+    {
+      "id": "enterprise-ai-adoption",
+      "title": "Enterprise AI Adoption Patterns",
       "category": "enterprise",
       "categoryDisplay": "Enterprise AI",
       "image": "card-enterprise-workspace.png",
-      "summary": "Exploring how organizations can strategically implement AI to drive business transformation and competitive advantage. Learn about proven frameworks for AI adoption, ROI measurement strategies, and overcoming common implementation challenges in enterprise environments.",
+      "summary": "Understand successful AI adoption patterns across different industries. Learn from real-world case studies and discover proven approaches for scaling AI initiatives across your organization.",
       "showOnIndex": true,
       "showOnArticles": true
     },
     {
       "id": "ai-business-models",
-      "title": "Building AI-Driven Business Models",
+      "title": "AI-Powered Business Models",
       "category": "enterprise",
       "categoryDisplay": "Enterprise AI",
-      "image": "card-enterprise-strategy.png",
-      "summary": "A comprehensive guide to developing sustainable business models that leverage artificial intelligence capabilities. Discover how leading companies are reimagining their value propositions through AI integration and creating new revenue streams.",
+      "image": "card-society-cityscape.png",
+      "summary": "Create innovative business models that leverage AI capabilities for competitive advantage. Explore how leading companies are reimagining their value propositions through AI integration.",
       "showOnIndex": true,
       "showOnArticles": true
     },
     {
-      "id": "ai-implementation-roadmap",
-      "title": "AI Implementation Roadmap",
+      "id": "enterprise-ai-infrastructure",
+      "title": "Building Enterprise AI Infrastructure",
       "category": "enterprise",
       "categoryDisplay": "Enterprise AI",
-      "image": "card-enterprise-control.png",
-      "summary": "Step-by-step guidance for enterprise leaders on implementing AI initiatives that deliver measurable business outcomes. Navigate the complexities of AI transformation with proven methodologies and best practices.",
+      "image": "card-society-future.png",
+      "summary": "Design and implement scalable AI infrastructure that meets enterprise requirements. From data platforms to MLOps pipelines, build the foundation for sustainable AI capabilities.",
       "showOnIndex": false,
       "showOnArticles": true
     },
@@ -57,66 +117,6 @@
       "categoryDisplay": "AI Epistemology",
       "image": "card-epistemology-knowledge.png",
       "summary": "Exploring the philosophical implications of AI transparency and how it relates to model interpretability and trust. Understand the ethical dimensions of AI explainability and its impact on responsible AI development.",
-      "showOnIndex": false,
-      "showOnArticles": true
-    },
-    {
-      "id": "privacy-preserving-training",
-      "title": "Privacy-Preserving AI Training",
-      "category": "federated",
-      "categoryDisplay": "Federated Learning",
-      "image": "card-federated-network.png",
-      "summary": "How federated learning enables collaborative AI development while maintaining data privacy and security. Understand the technical foundations and practical applications of distributed machine learning across organizations.",
-      "showOnIndex": true,
-      "showOnArticles": true
-    },
-    {
-      "id": "distributed-ai-architecture",
-      "title": "Distributed AI Architecture",
-      "category": "federated",
-      "categoryDisplay": "Federated Learning",
-      "image": "card-federated-distributed.png",
-      "summary": "Best practices for implementing federated learning systems across distributed organizational networks. Learn about system design patterns, communication protocols, and scalability considerations for federated AI.",
-      "showOnIndex": false,
-      "showOnArticles": true
-    },
-    {
-      "id": "federated-learning-challenges",
-      "title": "Overcoming Federated Learning Challenges",
-      "category": "federated",
-      "categoryDisplay": "Federated Learning",
-      "image": "card-federated-pathways.png",
-      "summary": "Addressing common obstacles in federated learning implementation including data heterogeneity and communication efficiency. Develop strategies for managing the complexities of distributed AI systems at scale.",
-      "showOnIndex": false,
-      "showOnArticles": true
-    },
-    {
-      "id": "ai-social-structures",
-      "title": "AI's Impact on Social Structures",
-      "category": "society",
-      "categoryDisplay": "AI in Society",
-      "image": "card-society-cityscape.png",
-      "summary": "Analyzing how artificial intelligence is reshaping social interactions and organizational dynamics in modern society. Explore the societal implications of AI adoption and strategies for managing technological transformation responsibly.",
-      "showOnIndex": false,
-      "showOnArticles": true
-    },
-    {
-      "id": "ethical-ai-implementation",
-      "title": "Ethical AI Implementation",
-      "category": "society",
-      "categoryDisplay": "AI in Society",
-      "image": "card-society-guidance.png",
-      "summary": "Frameworks for ensuring responsible AI deployment that considers societal impact and ethical implications. Learn how to build ethical considerations into your AI development process from the ground up.",
-      "showOnIndex": true,
-      "showOnArticles": true
-    },
-    {
-      "id": "ai-governance-policy",
-      "title": "AI Governance and Policy",
-      "category": "society",
-      "categoryDisplay": "AI in Society",
-      "image": "card-society-future.png",
-      "summary": "Exploring the role of governance structures and policy frameworks in shaping responsible AI development and deployment. Navigate the regulatory landscape and build compliant AI systems that serve the public good.",
       "showOnIndex": false,
       "showOnArticles": true
     }
