@@ -405,6 +405,110 @@ main {
   border-radius: 12px;
   text-align: center;
   transition: transform 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Special styling for cards with background images */
+.service-strategy,
+.service-training,
+.service-automation {
+  padding: 0;
+  position: relative;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 520px; /* Increased height for more space */
+}
+
+.service-image-section {
+  position: absolute;
+  top: -40px; /* Start image higher */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+/* Specific positioning for training card */
+.service-training .service-image-section {
+  top: 0px; /* No offset - image is pre-cropped */
+}
+
+/* Specific positioning for automation card */
+.service-automation .service-image-section {
+  top: 0px; /* No offset - image is pre-cropped */
+}
+
+.service-bg-image {
+  width: 100%;
+  height: calc(100% + 40px); /* Make image taller to compensate */
+  object-fit: cover;
+  object-position: center top; /* Position image starting from top */
+}
+
+/* Specific height for training card */
+.service-training .service-bg-image {
+  height: 100%; /* No extra height needed since no offset */
+}
+
+/* Specific height for automation card */
+.service-automation .service-bg-image {
+  height: 100%; /* No extra height needed since no offset */
+}
+
+/* Dark overlay over entire card */
+.service-strategy::after,
+.service-training::after,
+.service-automation::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  border-radius: 12px;
+}
+
+/* Gradient overlay for strategy card */
+.service-strategy::after {
+  background: linear-gradient(to bottom, 
+    transparent 0%, 
+    transparent 25%, 
+    rgba(30, 30, 30, 0.6) 35%, 
+    rgba(30, 30, 30, 0.6) 100%); /* Clear top 25%, gradient 25-35%, 60% overlay 35-100% */
+}
+
+/* Stronger overlay for training card - gradient from clear to dark */
+.service-training::after {
+  background: linear-gradient(to bottom, 
+    transparent 0%, 
+    transparent 25%, 
+    rgba(30, 30, 30, 0.8) 35%, 
+    rgba(30, 30, 30, 0.8) 100%); /* Clear top 25%, gradient 25-35%, full overlay 35-100% */
+}
+
+/* Gradient overlay for automation card */
+.service-automation::after {
+  background: linear-gradient(to bottom, 
+    transparent 0%, 
+    transparent 25%, 
+    rgba(30, 30, 30, 0.7) 35%, 
+    rgba(30, 30, 30, 0.7) 100%); /* Clear top 25%, gradient 25-35%, 70% overlay 35-100% */
+}
+
+.service-strategy .service-content,
+.service-training .service-content,
+.service-automation .service-content {
+  padding: 2rem;
+  position: absolute;
+  bottom: 0; /* Position from bottom */
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: none;
+  text-align: center;
 }
 
 .service:hover {
@@ -430,23 +534,64 @@ main {
 
 /* Epistemology Banner */
 .epistemology-banner {
-  background: var(--dark-gray);
-  padding: 2.5rem 2rem;
-  border-left: 4px solid var(--accent-blue);
+  padding: 0;
+  position: relative;
+  background: none;
   border-radius: 8px;
   margin-top: 3rem;
-  text-align: center;
+  overflow: hidden;
   color: var(--light-silver);
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
 }
 
-.epistemology-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 1.5rem;
-  display: block;
+/* Image positioning for epistemology banner */
+.epistemology-banner .service-image-section {
+  position: absolute;
+  top: 0px; /* No offset - image is pre-cropped */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.epistemology-banner .service-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Gradient overlay for epistemology banner */
+.epistemology-banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, 
+    transparent 0%, 
+    transparent 25%, 
+    rgba(30, 30, 30, 0.8) 60%, 
+    rgba(30, 30, 30, 0.8) 100%);
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.epistemology-content {
+  padding: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: none;
+  text-align: center;
 }
 
 .epistemology-banner h3 {
