@@ -106,6 +106,12 @@ header {
 }
 
 /* Navigation */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
 .nav-links {
   display: flex;
   list-style: none;
@@ -479,9 +485,9 @@ main {
 /* Footer */
 footer {
   background: var(--deep-navy);
-  padding: 2rem 0;
-  text-align: center;
+  padding: 3rem 0 2rem;
   margin-top: 4rem;
+  border-top: 1px solid rgba(192, 192, 192, 0.1);
 }
 
 .footer-content {
@@ -489,6 +495,74 @@ footer {
   margin: 0 auto;
   padding: 0 2rem;
   color: var(--text-light);
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-info {
+  text-align: left;
+}
+
+.footer-info p {
+  margin: 0.5rem 0;
+  color: var(--metallic-silver);
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.footer-social {
+  text-align: right;
+}
+
+.social-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--metallic-silver);
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+}
+
+.footer-social .social-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-social .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(192, 192, 192, 0.1);
+  transition: all 0.3s ease;
+}
+
+.footer-social .social-links img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0.7);
+  transition: filter 0.3s ease;
+}
+
+.footer-social .social-links a:hover {
+  background: rgba(192, 192, 192, 0.2);
+  transform: translateY(-2px);
+}
+
+.footer-social .social-links a:hover img {
+  filter: brightness(1);
 }
 
 /* Utility Classes */
@@ -591,6 +665,24 @@ footer {
     display: block;
   }
 
+  .footer-main {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .footer-info {
+    text-align: center;
+  }
+
+  .footer-social {
+    text-align: center;
+  }
+
+  .footer-social .social-links {
+    justify-content: center;
+  }
+
   .company-name {
     font-size: 1.4rem;
   }
@@ -683,6 +775,7 @@ footer {
   .company-name {
     font-size: 1.2rem;
   }
+
 
   .hero {
     height: 30vh;
