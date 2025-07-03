@@ -20,7 +20,9 @@
       "Bash(rm:*)",
       "Bash(curl:*)",
       "Bash(kill:*)",
-      "Bash(git config:*)"
+      "Bash(git config:*)",
+      "Bash(python:*)",
+      "Bash(git checkout:*)"
     ],
     "deny": []
   }
