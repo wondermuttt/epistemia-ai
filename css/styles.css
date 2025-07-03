@@ -243,7 +243,8 @@ main {
 /* Featured articles grid for index page - exactly 3 columns */
 .featured-articles .articles-grid {
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
+  column-gap: 0.75rem;
+  row-gap: 2.25rem; /* 3x the original 0.75rem */
   margin: 1.5rem auto 0;
   width: 90%;
   max-width: none;
@@ -864,7 +865,8 @@ footer {
 @media (max-width: 1024px) and (min-width: 769px) {
   .featured-articles .articles-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
+    column-gap: 0.75rem;
+    row-gap: 2.25rem;
     width: 85%;
     max-width: none;
     place-items: center;
@@ -941,7 +943,8 @@ footer {
 
   .featured-articles .articles-grid {
     grid-template-columns: 1fr;
-    gap: 0.75rem;
+    column-gap: 0.75rem;
+    row-gap: 2.25rem;
     width: 80%;
     max-width: none;
     place-items: center;
@@ -1031,7 +1034,8 @@ footer {
 
   .featured-articles .articles-grid {
     grid-template-columns: 1fr;
-    gap: 0.75rem;
+    column-gap: 0.75rem;
+    row-gap: 2.25rem;
     width: 75%;
     max-width: none;
     place-items: center;
