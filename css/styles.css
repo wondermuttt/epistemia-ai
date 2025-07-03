@@ -1330,6 +1330,47 @@ footer {
 
 .section-even {
   background-color: #1a1a1a;
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 20px,
+      rgba(192, 192, 192, 0.01) 20px,
+      rgba(192, 192, 192, 0.01) 21px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 20px,
+      rgba(192, 192, 192, 0.01) 20px,
+      rgba(192, 192, 192, 0.01) 21px
+    ),
+    radial-gradient(
+      circle at center,
+      transparent 0%,
+      rgba(70, 130, 180, 0.015) 50%,
+      transparent 100%
+    );
+  position: relative;
+}
+
+.section-even::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-conic-gradient(
+      from 0deg at 50% 50%,
+      transparent 0deg,
+      transparent 90deg,
+      rgba(192, 192, 192, 0.005) 90deg,
+      rgba(192, 192, 192, 0.005) 180deg
+    );
+  background-size: 60px 60px;
+  pointer-events: none;
 }
 
 .section-heading {
