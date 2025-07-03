@@ -1335,20 +1335,20 @@ footer {
       90deg,
       transparent,
       transparent 20px,
-      rgba(192, 192, 192, 0.01) 20px,
-      rgba(192, 192, 192, 0.01) 21px
+      rgba(192, 192, 192, 0.015) 20px,
+      rgba(192, 192, 192, 0.015) 21px
     ),
     repeating-linear-gradient(
       0deg,
       transparent,
       transparent 20px,
-      rgba(192, 192, 192, 0.01) 20px,
-      rgba(192, 192, 192, 0.01) 21px
+      rgba(192, 192, 192, 0.015) 20px,
+      rgba(192, 192, 192, 0.015) 21px
     ),
     radial-gradient(
       circle at center,
       transparent 0%,
-      rgba(70, 130, 180, 0.015) 50%,
+      rgba(70, 130, 180, 0.02) 50%,
       transparent 100%
     );
   position: relative;
@@ -1366,8 +1366,8 @@ footer {
       from 0deg at 50% 50%,
       transparent 0deg,
       transparent 90deg,
-      rgba(192, 192, 192, 0.005) 90deg,
-      rgba(192, 192, 192, 0.005) 180deg
+      rgba(192, 192, 192, 0.01) 90deg,
+      rgba(192, 192, 192, 0.01) 180deg
     );
   background-size: 60px 60px;
   pointer-events: none;
