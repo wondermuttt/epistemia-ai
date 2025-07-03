@@ -1217,14 +1217,60 @@ footer {
 
 /* About Intro */
 .about-intro {
-  padding: 60px 0;
+  padding: 80px 0;
   background-color: var(--charcoal);
+  position: relative;
+}
+
+.about-intro::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--metallic-silver), transparent);
+  opacity: 0.3;
 }
 
 .intro-text {
-  font-size: 1.1rem;
-  line-height: 1.5em;
+  font-size: 1.25rem;
+  line-height: 1.8;
   color: var(--text-light);
+  text-align: center;
+  position: relative;
+  padding: 0 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.intro-text::before,
+.intro-text::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  opacity: 0.1;
+}
+
+.intro-text::before {
+  top: -20px;
+  left: 0;
+  border-left: 2px solid var(--metallic-silver);
+  border-top: 2px solid var(--metallic-silver);
+}
+
+.intro-text::after {
+  bottom: -20px;
+  right: 0;
+  border-right: 2px solid var(--metallic-silver);
+  border-bottom: 2px solid var(--metallic-silver);
+}
+
+.intro-text strong {
+  color: var(--metallic-silver);
+  font-weight: 600;
 }
 
 /* About Sections */
