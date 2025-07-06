@@ -6,6 +6,13 @@ let articlesData = null;
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM Content Loaded - initializing website');
     
+    // Initialize video hero immediately
+    console.log('Initializing video hero first');
+    initVideoHero();
+    
+    // Initialize loop video speed on other pages
+    initLoopVideoSpeed();
+    
     // Load articles data first, then initialize functionality
     loadArticlesData().then(() => {
         console.log('Articles data loaded successfully');
@@ -16,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         initFormValidation();
         initScrollToTop();
         initHeroAnimation();
+        initDifferentiators();
     }).catch(error => {
         console.error('Failed to load articles data:', error);
         // Initialize other functionality even if articles fail to load
@@ -26,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         initFormValidation();
         initScrollToTop();
         initHeroAnimation();
+        initDifferentiators();
     });
 });
 
@@ -207,10 +216,12 @@ function generateArticleCards(articles, isIndexPage = false) {
         return '';
     }
 
-    return articles.map(article => {
-        const hiddenClass = isIndexPage ? 'hidden' : '';
+    return articles.map((article, index) => {
+        // Remove animation classes for index page
+        const hiddenClass = '';
+        const animDelay = 0;
         return `
-            <a href="article.html" class="article-item ${article.category} ${hiddenClass}" data-category="${article.category}">
+            <a href="article.html" class="article-item ${article.category} ${hiddenClass}" data-category="${article.category}" data-anim-delay="${animDelay}">
                 <img src="images/${article.image}" alt="${article.title}" class="article-image">
                 <div class="article-title-overlay">
                     <h3 class="article-title">${article.title}</h3>
@@ -318,15 +329,19 @@ function initScrollAnimations() {
     if (hiddenElements.length > 0) {
         // Use Intersection Observer for better performance
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.2,
+            rootMargin: '0px 0px -300px 0px'
         };
         
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                    entry.target.classList.remove('hidden');
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting && !entry.target.classList.contains('show')) {
+                    // Add staggered delay for elements within the same section
+                    const delay = parseInt(entry.target.dataset.animDelay) || 0;
+                    setTimeout(() => {
+                        entry.target.classList.add('show');
+                        entry.target.classList.remove('hidden');
+                    }, delay);
                     observer.unobserve(entry.target);
                 }
             });
@@ -597,6 +612,112 @@ function initHeroAnimation() {
     });
 }
 
+// Initialize video hero functionality
+function initVideoHero() {
+    const mainVideo = document.querySelector('.hero-video-main');
+    const loopVideo = document.querySelector('.hero-video-loop');
+    
+    if (!mainVideo || !loopVideo) {
+        console.log('Video elements not found');
+        return;
+    }
+    
+    console.log('Video system initializing with seamless loop transition');
+    
+    // Remove the inline style that was hiding the loop video
+    loopVideo.style.display = 'block';
+    
+    // When main video ends, switch to loop video
+    mainVideo.addEventListener('ended', function() {
+        console.log('Main video ended, starting continuous loop at 1/3 speed');
+        // Use the CSS classes for transitions
+        mainVideo.classList.add('fade-out');
+        loopVideo.classList.add('active');
+        loopVideo.playbackRate = 0.33; // Play at 1/3 speed
+        loopVideo.play();
+    });
+    
+    // Start playing the main video
+    mainVideo.play().catch(function(error) {
+        console.log('Video autoplay failed:', error);
+    });
+}
+
+// Initialize loop video speed on non-index pages
+function initLoopVideoSpeed() {
+    // Check if we're on a page with a single loop video (not index page)
+    const heroVideo = document.querySelector('.hero-video-bg');
+    const isIndexPage = document.querySelector('.hero-video-main');
+    
+    if (heroVideo && !isIndexPage) {
+        console.log('Setting loop video to 1/3 speed on non-index page');
+        heroVideo.playbackRate = 0.33;
+    }
+}
+
+// Initialize interactive differentiators section
+function initDifferentiators() {
+    // Check for new interactive menu layout first
+    const menuItems = document.querySelectorAll('.diff-menu-item');
+    const contentItems = document.querySelectorAll('.diff-content-item');
+    
+    if (menuItems.length > 0 && contentItems.length > 0) {
+        // New interactive menu functionality
+        menuItems.forEach(menuItem => {
+            menuItem.addEventListener('mouseenter', function() {
+                handleMenuHover(this);
+            });
+            
+            menuItem.addEventListener('click', function(e) {
+                e.preventDefault();
+                handleMenuHover(this);
+            });
+        });
+        
+        function handleMenuHover(menuItem) {
+            const targetDiff = menuItem.getAttribute('data-diff');
+            
+            // Update active states for menu items
+            menuItems.forEach(item => item.classList.remove('active'));
+            menuItem.classList.add('active');
+            
+            // Update active states for content items
+            contentItems.forEach(content => {
+                if (content.getAttribute('data-diff') === targetDiff) {
+                    content.classList.add('active');
+                } else {
+                    content.classList.remove('active');
+                }
+            });
+        }
+        
+        return; // Exit if new layout is found
+    }
+    
+    // Fallback to old differentiator profiles if they exist
+    const profiles = document.querySelectorAll('.differentiator-profile');
+    
+    if (profiles.length === 0) return;
+    
+    profiles.forEach(profile => {
+        // Handle both click and hover events
+        profile.addEventListener('mouseenter', function() {
+            handleDifferentiatorChange(this);
+        });
+        
+        profile.addEventListener('click', function(e) {
+            e.preventDefault();
+            handleDifferentiatorChange(this);
+        });
+    });
+    
+    function handleDifferentiatorChange(profile) {
+        // Update active states for all profiles
+        profiles.forEach(p => p.classList.remove('active'));
+        profile.classList.add('active');
+    }
+}
+
 // Console welcome message
-console.log('%cWelcome to Epistemia AI Consultancy', 'color: #4682B4; font-size: 18px; font-weight: bold;');
+console.log('%cWelcome to Epistemia AI Consultancy - v2', 'color: #4682B4; font-size: 18px; font-weight: bold;');
 console.log('%cEmpowering intelligent solutions through epistemic AI', 'color: #C0C0C0; font-size: 14px;');
