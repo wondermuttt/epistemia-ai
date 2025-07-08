@@ -2,177 +2,176 @@
 
 ## Project Overview
 
-Epistemia is a premium AI consultancy requiring a clean, professional, responsive website showcasing thought leadership content and services. Use **vanilla HTML, CSS, and JavaScript** with no frameworks. Design reflects **elite AI consulting** brand: sleek dark aesthetic with charcoal/deep navy background, metallic silver highlights, owl-themed logo symbolizing wisdom. Typography combines Lora (serif headings) and Inter (sans-serif body). Fully responsive, optimized for GitHub Pages, with semantic markup and well-commented code.
+Epistemia is a premium AI consultancy specializing in agentic AI systems and intelligent automation. The website features a modern, professional design with video hero sections, interactive elements, and dynamic content loading. Built with **vanilla HTML, CSS, and JavaScript** (no frameworks). Design emphasizes **elite AI consulting** with sophisticated visuals, video backgrounds, and seamless user experience.
 
-## Project Structure
+## Current Project Structure
 
 ```
 epistemia.ai/
-├── index.html          # Home page (hero + featured articles grid)
-├── articles.html       # Articles listing with category filters
-├── article.html        # Single article template (lorem ipsum)
-├── services.html       # Services page (3 key services + icons)
-├── about.html          # About page (mission, vision, story)
-├── contact.html        # Contact page (form + JS validation)
+├── index.html              # Home page with video hero + featured articles
+├── articles.html           # Articles listing with category filters
+├── article.html            # Single article template
+├── services.html           # Services page with 3 services + epistemology
+├── about.html              # About page with leadership, mission, interactive differentiators
+├── contact.html            # Contact page with form validation
+├── robots.txt              # SEO configuration (allows all crawlers)
+├── CNAME                   # GitHub Pages custom domain
+├── articles.json           # Articles data source
 ├── css/
-│   └── styles.css      # Main stylesheet
+│   └── styles.css          # Main stylesheet with advanced animations
 ├── js/
-│   └── main.js         # Main JavaScript file
-└── images/             # All placeholder SVG files
-    ├── logo-metallic.svg     # Primary owl logo (metallic silver)
-    ├── logo-simple.svg       # Simplified owl logo (favicon)
-    ├── header-bg.svg         # Hero background (dark tech theme)
-    ├── thumb-enterprise-{1,2}.svg    # "Enterprise AI" thumbnails
-    ├── thumb-epistemology-{1,2}.svg  # "AI Epistemology" thumbnails
-    ├── thumb-federated-{1,2}.svg     # "Federated Learning" thumbnails
-    ├── thumb-society-{1,2}.svg       # "AI in Society" thumbnails
-    ├── icon-consulting.svg    # Strategic AI Consulting icon
-    ├── icon-training.svg      # AI Leadership Training icon
-    └── icon-guidance.svg      # Model Epistemology Guidance icon
+│   └── main.js             # JavaScript with dynamic content loading
+├── images/                 # Production images and assets
+│   ├── logo.png            # Main logo
+│   ├── Lens.mp4            # Hero video (main)
+│   ├── lens_loop.mp4       # Hero video (loop at 1/3 speed)
+│   ├── paul-henkelman-ceo.jpg     # Founder portrait
+│   ├── mary-flores-president.jpg  # Founder portrait
+│   ├── Automation.png      # Service image
+│   ├── Compass.png         # Service image
+│   ├── Training2.png       # Service image
+│   ├── Epistemology.png    # Service image
+│   ├── card-*.png          # Article card images
+│   ├── icon-*.svg          # Social media and service icons
+│   └── [other assets]      # Favicons, backgrounds, etc.
+├── workspace/              # Non-deployable files (gitignored)
+│   ├── tmpimages/          # Temporary/source images
+│   └── *.sh                # Build scripts
+└── .gitignore              # Excludes workspace/, .DS_Store, etc.
 ```
 
-**Note:** All images are placeholder SVGs using brand colors (charcoal, navy, silver). Ensure exact filenames for proper referencing.
+## Key Features & Implementation
 
-## HTML Pages
+### Design System
 
-All pages use semantic HTML5 structure with consistent header/footer:
+- **Color Palette:**
+  - Primary: #2c3e50 (dark slate)
+  - Accent: #4682B4 (steel blue) 
+  - Background: #1a1a1a (near black)
+  - Text: #C0C0C0 (silver) on dark
+  - Highlights: Linear gradients with metallic effects
 
-- **Header:** Logo left, nav menu right. Mobile hamburger menu (☰) toggles nav. Navy background, silver/white text.
-- **Footer:** Copyright notice, minimal styling matching color scheme.
-- Include Google Fonts: `<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lora:wght@700&display=swap" rel="stylesheet">`
-- Link to CSS and JS: `<script src="js/main.js" defer></script>`
-- Use HTML comments for major sections: `<!-- Hero Section -->`, `<!-- Services Section -->`
+- **Typography:**
+  - Headings: 'Lora', serif
+  - Body: 'Inter', sans-serif
+  - Responsive sizing with rem units
 
-### index.html – Home Page
+### Hero Sections
 
-- **Hero Section:** Full-width banner with header-bg.svg background, logo-metallic.svg prominently displayed, tagline "Empowering Intelligent Solutions through Epistemic AI" (large Lora font, silver color), centered content
-- **Featured Articles Grid:** 8 article tiles in responsive grid (4x2 desktop, 2-3 columns tablet, 1 column mobile). Each tile: thumbnail image, title, category label. Hover effects: subtle lift/shadow with CSS transitions (0.3s)
+- **Video Heroes:** Lens.mp4 plays once, then seamless transition to lens_loop.mp4 at 0.33x speed
+- **Text Overlays:** 
+  - Index: "Accelerating Evolution" with "Innovate. Automate. Thrive."
+  - About: "Pioneering the Future of Intelligent Enterprise"
+- **Gradient Overlays:** Ensures text readability over video
 
-### articles.html – Articles Listing
+### Navigation
 
-- **Page Header:** `<h1>Articles</h1>` + brief intro
-- **Category Filter:** Horizontal buttons for "All", "Enterprise AI", "AI Epistemology", "Federated Learning", "AI in Society". Use `data-category` attributes and `.active` class styling
-- **Articles Grid:** Similar to home page tiles but all articles. Each item has category classes for JS filtering
-- **Filtering Logic:** Show/hide articles based on category selection, smooth transitions
+- **Desktop:** Horizontal nav with hover effects
+- **Mobile:** Hamburger menu with slide-down animation
+- **Active States:** Current page highlighted
+- **Social Links:** Footer with LinkedIn, Medium, Threads, X icons
 
-### article.html – Single Article Template
+### Content Features
 
-- **Article Header:** `<article>` element, large `<h1>` title, meta info (author, date)
-- **Content:** Lorem ipsum with realistic structure: intro paragraph, subheadings (`<h2>`, `<h3>`), paragraphs, lists, blockquotes
-- **Layout:** Max-width for readability (~65-75 characters per line), adequate margins
+1. **Dynamic Article System**
+   - Articles loaded from articles.json
+   - Category filtering (Enterprise AI, AI Epistemology, Federated Learning, AI in Society)
+   - Hover effects show article summaries
+   - Index shows 8 featured articles, articles page shows all
 
-### services.html – Services Page
+2. **Services Page**
+   - Strategic AI Consulting (Compass.png)
+   - AI Leadership Training (Training2.png)
+   - AI Automation & Agentic Systems (Automation.png)
+   - Model Epistemology section (Epistemology.png)
 
-- **Intro:** `<h1>Our Services</h1>` + introductory paragraph
-- **Services Grid:** Three-column layout (desktop), single column (mobile):
-  1. **Strategic AI Consulting** (icon-consulting.svg) - AI strategy, roadmaps, business alignment
-  2. **AI Leadership Training** (icon-training.svg) - Executive education, AI literacy, data culture
-  3. **Model Epistemology Guidance** (icon-guidance.svg) - Model interpretation, transparency, validation
-- Each service: icon, `<h2>` title, descriptive paragraph
+3. **About Page**
+   - Leadership section with founder portraits
+   - Mission statement with emphasis styling
+   - Interactive "What Sets Epistemia Apart" section:
+     - Left menu with 4 differentiators
+     - Right content area updates on hover
+     - Smooth transitions between content
+   - Multiple content sections with alternating backgrounds
 
-### about.html – About Page
+4. **Contact Form**
+   - Real-time validation
+   - Error messages for each field
+   - Success message on submission
+   - Styled with consistent design system
 
-- **Sections:**
-  - `<h1>About Epistemia</h1>`
-  - `<h2>Our Mission</h2>` - Knowledge-centric AI solutions, bridging technology and strategy
-  - `<h2>Our Vision</h2>` - AI guided by wisdom and responsibility
-  - `<h2>Our Story</h2>` - Founded 2024, focus on epistemic rigor, Fortune 500 + startups
-- Text-focused layout with comfortable reading width
+### Animations & Effects
 
-### contact.html – Contact Page
+- **Scroll Animations:** Elements fade in on About page only
+- **Hover Effects:** 
+  - Article cards lift with shadow
+  - Service images scale slightly
+  - Buttons and links have color transitions
+- **Page Transitions:** Smooth scrolling, no jarring movements
+- **Video Backgrounds:** Optimized loading with overlay gradients
 
-- **Form Elements:**
-  - Name: `<input type="text" name="name" required>`
-  - Email: `<input type="email" name="email" required>`
-  - Message: `<textarea name="message" required></textarea>`
-  - Submit: `<button type="submit">Send Message</button>`
-- **Validation:** JS checks for empty fields, valid email format, prevents submission on errors, shows success message
-- Optional contact info: "Or email us at info@epistemia.ai"
+### JavaScript Functionality
 
-## CSS – `css/styles.css`
-
-### Color Palette
-- **Charcoal:** #2c2c2c (backgrounds, heavy text)
-- **Deep Navy:** #0b1e2e (header/nav, accents)
-- **Metallic Silver:** #C0C0C0 (text highlights, borders, icons)
-
-### Typography
-```css
-h1, h2, h3, .hero-tagline { font-family: 'Lora', serif; }
-body, p, li, input, textarea, button { font-family: 'Inter', sans-serif; }
+```javascript
+// Core modules initialized on DOMContentLoaded:
+- initVideoHero()        // Manages video transitions
+- loadArticlesData()     // Loads articles from JSON
+- initMobileNavigation() // Hamburger menu
+- initDynamicArticles()  // Generates article cards
+- initArticleFiltering() // Category filters
+- initScrollAnimations() // Intersection Observer (About page)
+- initFormValidation()   // Contact form
+- initDifferentiators()  // Interactive About section
 ```
 
-### Layout & Responsive Design
-- **CSS Grid/Flexbox:** Article grids, services layout, header layout
-- **Media Queries:** Mobile-first approach, breakpoints ~600px (mobile), ~900px (tablet)
-- **Article Grid Example:** `display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;`
+### Responsive Design
 
-### Key Components
-- **Navigation:** Horizontal desktop, vertical dropdown mobile with `.nav-open` class toggle
-- **Buttons:** Consistent styling with hover effects, `.active` state for filters
-- **Article Cards:** Dark background, hover lift effect, smooth transitions
-- **Forms:** Full-width inputs (max-width: 500px), focus effects, placeholder styling
+- **Breakpoints:**
+  - Mobile: < 768px
+  - Tablet: 768px - 1024px
+  - Desktop: > 1024px
+- **Grid Layouts:** CSS Grid with auto-fit
+- **Images:** Responsive sizing, maintains aspect ratios
+- **Typography:** Scales appropriately across devices
 
-### Animations
-- **Hover Effects:** Transform, box-shadow transitions (200-300ms)
-- **Scroll Reveals:** `.hidden` class initially (opacity: 0, translateY: 20px), `.show` class reveals (opacity: 1, transform: none), transition 0.6s ease-out
+### Performance Optimizations
 
-## JavaScript – `js/main.js`
+- **Lazy Loading:** Videos load on demand
+- **CSS Versioning:** Cache busting with ?v=47
+- **Minimal Dependencies:** No external libraries
+- **Optimized Images:** Compressed PNGs, SVG icons
+- **Debounced Scrolling:** Prevents performance issues
 
-### Core Features
+## Deployment
 
-1. **Mobile Navigation Toggle**
-   ```js
-   document.querySelector('.menu-toggle').addEventListener('click', function() {
-       document.querySelector('.nav-links').classList.toggle('open');
-   });
-   ```
+- **Platform:** GitHub Pages
+- **Domain:** epistemia.ai (via CNAME)
+- **Repository:** github.com/wondermuttt/epistemia-ai
+- **SEO:** robots.txt allows all crawlers
 
-2. **Article Category Filtering**
-   - Get filter buttons and article items
-   - On button click: update `.active` state, show/hide articles based on `data-category`
-   - "All" shows everything, specific categories filter accordingly
+## Development Workflow
 
-3. **Scroll-Triggered Reveals**
-   - Use IntersectionObserver for elements with `.hidden` class
-   - Add `.show` class when elements enter viewport
-   - Target: article tiles, service items, content sections
+1. **Local Changes:** Edit in main directory
+2. **Testing Assets:** Keep in workspace/ directory
+3. **Committing:** Use `git add -A` (workspace/ is gitignored)
+4. **Deployment:** Push to master branch auto-deploys
 
-4. **Form Validation**
-   - Prevent form submission if fields empty or email invalid
-   - Use `alert()` for error messages, `form.reset()` on success
-   - Basic email validation: check for @ and . characters
+## Important Notes
 
-### Implementation Notes
-- Guard code sections for page-specific elements (check if elements exist)
-- Use comments for major sections
-- Keep code ~50-100 lines, well-organized
-- No external dependencies
+- Articles render immediately on index/services pages (no scroll animation)
+- About page has scroll-triggered animations for sections
+- Video loop plays at 1/3 speed for subtle movement
+- All temporary files should go in workspace/ directory
+- Use semantic HTML5 throughout
+- Maintain accessibility with proper ARIA labels
+- Test across browsers for video compatibility
 
-## Images & Assets
+## Recent Updates
 
-### SVG Specifications
-All images are placeholder SVGs using brand colors:
-
-- **logo-metallic.svg:** Stylized owl with metallic silver effect, suitable for dark backgrounds
-- **logo-simple.svg:** Flat owl icon for favicon/small usage
-- **header-bg.svg:** Abstract tech background (circuits/nodes) in navy/charcoal gradients
-- **Article Thumbnails:** Category-specific icons (8 total):
-  - Enterprise: office/business + AI elements
-  - Epistemology: brain/owl/knowledge symbols
-  - Federated: connected devices/network diagrams
-  - Society: people/globe + digital elements
-- **Service Icons:** Strategy (chess/target), training (presentation/graduation), guidance (owl/magnifying glass)
-
-All icons consistent style, silver on dark backgrounds, recognizable at small sizes.
-
-## Success Criteria
-
-1. **Clean Structure:** Semantic HTML5, organized file structure, commented code, no unused libraries
-2. **Responsive Layout:** Mobile-first design, fluid grids, hamburger navigation, no horizontal scroll
-3. **Elegant Interactivity:** Smooth hover effects, working filters, scroll reveals, form validation
-4. **Professional Branding:** Dark theme with silver accents, premium aesthetic, consistent typography
-5. **Clear Content Flow:** Logical navigation, effective CTAs, thought leadership showcase
-6. **Performance:** Fast loading, browser compatibility, graceful degradation
-
-Target: Professional static website reflecting elite AI consultancy brand, fully functional with vanilla web technologies.
+- Implemented video hero sections with seamless looping
+- Added founder portraits and leadership section
+- Created interactive differentiators with hover states
+- Updated article card images for better visual appeal
+- Reorganized project structure with workspace directory
+- Added comprehensive .gitignore for cleaner commits
+- Implemented robots.txt for SEO
